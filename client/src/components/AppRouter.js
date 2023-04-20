@@ -1,6 +1,7 @@
 import React from 'react'
 import {Routes,Route,Redirect} from 'react-router-dom'
 import { authRoutes, publicRoutes } from '../routes';
+import { SHOP_ROUTE } from '../utils/consts';
 
 /**
 * @author
@@ -19,6 +20,7 @@ export const AppRouter = (props) => {
             <Route key={path} component={Components} exact/>
         
         )}
+        <Redirect to={SHOP_ROUTE}/>
     </Routes>
    );
 
