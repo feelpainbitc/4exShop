@@ -1,0 +1,36 @@
+.navbar{
+    padding-top: 30px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navbar_left{
+    display: flex;
+    color:#212121;
+}
+.navbar_right{
+    display: flex;
+    color:#212121;
+}
+
+.btns{
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 35px;
+}
+.basket{
+
+}
+.profile{
+
+}
+.logo{
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+    
+}
