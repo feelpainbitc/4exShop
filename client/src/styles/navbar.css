@@ -28,6 +28,7 @@
 .navbar_adm:hover{
     box-shadow: 1px 1px 1px white;
     border: 1px solid #82f0ff;
+    color: #82f0ff;
 }
 .navbar_ent{
     border: 1px solid white;
@@ -38,4 +39,5 @@
 .navbar_ent:hover{
     box-shadow: 1px 1px 1px white;
     border: 1px solid #82f0ff;
+    color:#82f0ff;
 }
