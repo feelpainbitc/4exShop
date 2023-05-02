@@ -5,14 +5,14 @@ export default class DeviceStore{
         this._types=[
             {id:1,name:'Смартфоны'},
             {id:2,name:'Планшеты'},
-            {id:1,name:'Смарт-часы'},
-            {id:1,name:'Ноутбуки'},
+            {id:3,name:'Смарт-часы'},
+            {id:4,name:'Ноутбуки'},
         ]
         this._brands=[
             {id:1,name:'Samsung'},
-            {id:1,name:'Apple'},
-            {id:1,name:'Lenovo'},
-            {id:1,name:'Asus'},
+            {id:2,name:'Apple'},
+            {id:3,name:'Lenovo'},
+            {id:4,name:'Asus'},
         ]
         this._devices=[
        
@@ -25,6 +25,9 @@ export default class DeviceStore{
             {id:7,name:'Iphone 14pro7', price: 1500, rating:4, img:'https://shop.mts.by/upload/resize_cache/webp/iblock/5f4/gle139l2dqor8x58hpwiodaong3nua0q/270_500_1/iPhone_14_Pro_Max_Purple_1.webp'},
 
         ]
+
+        this._selectedType={}
+        this._selectedBrand={}
         makeAutoObservable(this)
     }
 
@@ -37,6 +40,13 @@ export default class DeviceStore{
     setDevices(devices){
         this._devices=devices
     }
+    setSelectedType(type){
+        this._selectedType=type
+    }
+    setSelectedBrand(brand){
+        this._selectedBrand=brand
+    }
+
 
 
     get types(){
@@ -47,5 +57,11 @@ export default class DeviceStore{
     }
     get devices(){
         return this._devices
+    }
+    get selectedType(){
+        return this._selectedType
+    }
+    get selectedBrand(){
+        return this._selectedBrand
     }
 }
