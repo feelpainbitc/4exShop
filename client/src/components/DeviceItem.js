@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/esm/Col'
 import Card from 'react-bootstrap/esm/Card'
 import Image from 'react-bootstrap/esm/Image'
 import star from '../assets/Vector.png'
+import { DEVICE_ROUTE } from '../utils/consts'
 
 /**
 * @author
@@ -14,7 +15,7 @@ import star from '../assets/Vector.png'
 export const DeviceItem = ({device}) => {
     const navigate=useNavigate();
   return(
-    <Col md={3} className="mt-3">
+    <Col md={3} className="mt-3" onClick={()=>navigate(DEVICE_ROUTE+'/'+device.id)}>
         <Card style={{width:160,cursor:'pointer'}} border='dark'>
             <Image width={148} height={148} src={device.img} className="align-self-center"/>
             <div className="d-flex justify-content-between align-items-center mt-1">
