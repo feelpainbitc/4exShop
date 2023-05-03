@@ -22,7 +22,7 @@ export const NavBar = observer((props) => {
   return(
     <Navbar bg="dark" variant="dark">
         <Container>
-          <NavLink style={{color:'white'}} to={SHOP_ROUTE}>4EX SHOP</NavLink>
+          <NavLink style={{color:'white', fontSize:30, textDecoration:'none'}} to={SHOP_ROUTE}>4EX SHOP</NavLink>
           {user.isAuth?
           <Nav className="ml-auto" style={{color:'white'}}>
             <Button variant={"outline-light"} onClick={()=>navigate(ADMIN_ROUTE)}>Админ Панель</Button>
