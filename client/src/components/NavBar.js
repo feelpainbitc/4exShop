@@ -19,6 +19,12 @@ import Button from 'react-bootstrap/Button';
 export const NavBar = observer((props) => {
   const navigate=useNavigate();
     const {user}=useContext(Context)
+
+    const logOut=()=>{
+      user.setUser({})
+      user.setIsAuth(false)
+    }
+
   return(
     <Navbar bg="dark" variant="dark">
         <Container>
@@ -26,11 +32,11 @@ export const NavBar = observer((props) => {
           {user.isAuth?
           <Nav className="ml-auto" style={{color:'white'}}>
             <Button variant={"outline-light"} onClick={()=>navigate(ADMIN_ROUTE)}>Админ Панель</Button>
-            <Button variant={"outline-light"}onClick={()=>navigate(LOGIN_ROUTE)} >Выйти</Button>
+            <Button variant={"outline-light"} onClick={()=>logOut()} >Выйти</Button>
           </Nav>
             :
             <Nav className="ml-auto" style={{color:'white'}}>
-            <Button variant={"outline-light"} onClick={()=>user.setIsAuth(true)}>Авторизация</Button>
+            <Button variant={"outline-light"} onClick={()=>navigate(LOGIN_ROUTE)}>Авторизация</Button>
           </Nav>
         }
         </Container>
