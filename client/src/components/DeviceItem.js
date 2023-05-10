@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {useNavigate} from 'react-router-dom'
 
 import Col from 'react-bootstrap/esm/Col'
@@ -13,6 +13,7 @@ import { DEVICE_ROUTE } from '../utils/consts'
 **/
 
 export const DeviceItem = ({device}) => {
+
     const navigate=useNavigate();
   return(
     <Col md={3} className="mt-3" onClick={()=>navigate(DEVICE_ROUTE+'/'+device.id)}>
